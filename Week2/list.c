@@ -91,3 +91,79 @@ void destroy_list(List* self) {
 	}
 	self->head = NULL;
 }
+
+void list_test() {
+    printf("=== Starting Linked List Tests ===\n\n");
+
+    // Test insert_at_front
+    printf("Testing insert_at_front...\n");
+    List front_list = new_list();
+    insert_at_front(&front_list, 5);
+    insert_at_front(&front_list, 3);
+    insert_at_front(&front_list, 7);
+    insert_at_front(&front_list, 2);
+    insert_at_front(&front_list, 0);
+
+    printf("Expected: 0, 2, 7, 3, 5\n");
+    printf("  Result: ");
+    print_list(&front_list);
+    printf("\n");
+
+    // Test insert_in_order
+    printf("Testing insert_in_order...\n");
+    List order_list = new_list();
+    insert_in_order(&order_list, 5);
+    insert_in_order(&order_list, 3);
+    insert_in_order(&order_list, 7);
+    insert_in_order(&order_list, 2);
+    insert_in_order(&order_list, 0);
+
+    printf("Expected: 0, 2, 3, 5, 7\n");
+    printf("  Result: ");
+    print_list(&order_list);
+    printf("\n");
+
+    // Test delete_list
+    printf("Testing delete_list...\n");
+    printf("Deleting 3...\n");
+    delete_list(&order_list, 3);
+    printf("Expected: 0, 2, 5, 7\n");
+    printf("  Result: ");
+    print_list(&order_list);
+
+    printf("Deleting 0 (first element)...\n");
+    delete_list(&order_list, 0);
+    printf("Expected: 2, 5, 7\n");
+    printf("  Result: ");
+    print_list(&order_list);
+
+    printf("Deleting 7 (last element)...\n");
+    delete_list(&order_list, 7);
+    printf("Expected: 2, 5\n");
+    printf("  Result: ");
+    print_list(&order_list);
+    printf("\n");
+
+    // Test edge cases
+    printf("Testing edge cases...\n");
+    printf("Deleting non-existent item (10)...\n");
+    delete_list(&order_list, 10);
+    printf("Expected: 2, 5\n");
+    printf("  Result: ");
+    print_list(&order_list);
+
+    printf("Inserting into empty list...\n");
+    List empty_list = new_list();
+    insert_in_order(&empty_list, 10);
+    printf("Expected: 10\n");
+    printf("  Result: ");
+    print_list(&empty_list);
+    printf("\n");
+
+    // Clean up
+    destroy_list(&front_list);
+    destroy_list(&order_list);
+    destroy_list(&empty_list);
+
+    printf("=== All Tests Completed ===\n");
+}
