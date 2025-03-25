@@ -167,3 +167,65 @@ void list_test() {
 
     printf("=== All Tests Completed ===\n");
 }
+
+// inserting a value
+static void option_insert(List* self) {
+    int data;
+    printf("Enter value to insert: ");
+    scanf_s("%d", &data);
+    insert_at_front(self, data);
+    printf("%d inserted at front.\n", data);
+}
+
+// deleting a value
+static void option_delete(List* self) {
+    int data;
+    printf("Enter value to delete: ");
+    scanf_s("%d", &data);
+    delete_list(self, data);
+    printf("Deleted first occurrence of %d (if it existed).\n", data);
+}
+
+// printing the list
+static void option_print(List* self) {
+    printf("Current list: ");
+    print_list(self);
+}
+
+// test function 
+void list_adhoc_test() {
+    List my_list = new_list();
+    int quit = 0;
+
+    printf("\n=== Linked List Interactive Test ===\n");
+    printf("0 - Quit\n");
+    printf("1 - Insert at front\n");
+    printf("2 - Delete value\n");
+    printf("3 - Print list\n\n");
+
+    while (!quit) {
+        int option;
+        printf("Enter option: ");
+        scanf_s("%d", &option);
+
+        switch (option) {
+        case 0:
+            quit = 1;
+            break;
+        case 1:
+            option_insert(&my_list);
+            break;
+        case 2:
+            option_delete(&my_list);
+            break;
+        case 3:
+            option_print(&my_list);
+            break;
+        default:
+            printf("Invalid option. Try again.\n");
+        }
+    }
+
+    destroy_list(&my_list);
+    printf("List destroyed. Exiting test.\n");
+}
