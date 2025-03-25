@@ -33,3 +33,9 @@ void destroy_list(List* self);
 void list_test();
 
 void list_adhoc_test();
+
+// Function to reverse a list and return a new reversed list
+List reverse(List* self);
+
+// Function to merge two ordered lists into one ordered list
+List merge(List* list1, List* list2);
