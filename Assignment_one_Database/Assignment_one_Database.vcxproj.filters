@@ -18,6 +18,12 @@
     <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="playerLinklist.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="teamLinklist.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="playerLinklist.h">

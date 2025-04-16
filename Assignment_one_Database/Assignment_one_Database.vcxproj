@@ -128,6 +128,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.c" />
+    <ClCompile Include="playerLinklist.c" />
+    <ClCompile Include="teamLinklist.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="playerLinklist.h" />
