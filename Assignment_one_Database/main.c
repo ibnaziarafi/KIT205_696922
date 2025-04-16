@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include "playerLinklist.h"
 int main() {
-	// printf() displays the string inside quotation
-	printf("Hello, World!");
+	
+	test_player_module();
 	return 0;
 }

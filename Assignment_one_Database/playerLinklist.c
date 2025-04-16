@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -31,4 +32,25 @@ void print_players(const PlayerList* list) {
             curr->name, curr->position, curr->age, curr->contractValue);
         curr = curr->next;
     }
+}
+
+void test_player_module() {
+    printf("Running test_player_module()...\n");
+
+    PlayerList testList = { NULL };
+
+    // Test printing empty list
+    printf("Test: Print empty player list:\n");
+    print_players(&testList);
+
+    // Add players
+    PlayerNodePtr p1 = create_player("Messi", "Forward", 36, 50.0);
+    PlayerNodePtr p2 = create_player("Neuer", "Goalkeeper", 38, 20.0);
+
+    add_player(&testList, p1);
+    add_player(&testList, p2);
+
+    // Test printing filled list
+    printf("\nTest: Print player list with entries:\n");
+    print_players(&testList);
 }
