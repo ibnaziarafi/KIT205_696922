@@ -38,4 +38,27 @@ void print_teams(const TeamList* list) {
 }
 
 
+void test_team_module() {
+    printf("\nRunning test_team_module()...\n");
+
+    TeamList testLeague = { NULL };
+
+    
+    printf("Test: Print empty team list:\n");
+    print_teams(&testLeague);
+
+    // Create team and add players
+    TeamNodePtr liverpool = create_team("Liverpool");
+    add_player(&liverpool->players, create_player("Salah", "Forward", 31, 90.0));
+    add_player(&liverpool->players, create_player("Alisson", "Goalkeeper", 32, 40.0));
+    add_team(&testLeague, liverpool);
+
+    // Another team
+    TeamNodePtr arsenal = create_team("Arsenal");
+    add_team(&testLeague, arsenal);
+
+    
+    printf("\nTest: Print teams and players:\n");
+    print_teams(&testLeague);
+}
 
