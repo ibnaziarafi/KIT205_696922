@@ -1,12 +1,13 @@
 #ifndef TEAMBST_H
 #define TEAMBST_H
+#include "playerBST.h" 
 
 typedef struct teamBSTNode {
     char* teamName;
+    PlayerBSTNodePtr players; 
     struct teamBSTNode* left;
     struct teamBSTNode* right;
 } TeamBSTNode, * TeamBSTNodePtr;
-
 
 TeamBSTNodePtr create_team_bst_node(const char* teamName);
 TeamBSTNodePtr insert_team_bst(TeamBSTNodePtr root, TeamBSTNodePtr newNode);
