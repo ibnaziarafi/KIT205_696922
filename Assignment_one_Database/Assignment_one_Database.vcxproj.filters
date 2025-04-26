@@ -24,6 +24,9 @@
     <ClCompile Include="teamLinklist.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="playerBST.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="playerLinklist.h">
