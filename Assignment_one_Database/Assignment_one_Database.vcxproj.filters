@@ -32,5 +32,8 @@
     <ClInclude Include="teamlinklist.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="playerBST.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

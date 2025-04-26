@@ -132,6 +132,7 @@
     <ClCompile Include="teamLinklist.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="playerBST.h" />
     <ClInclude Include="playerLinklist.h" />
     <ClInclude Include="teamlinklist.h" />
   </ItemGroup>
