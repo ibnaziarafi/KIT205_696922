@@ -130,11 +130,13 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="playerBST.c" />
     <ClCompile Include="playerLinklist.c" />
+    <ClCompile Include="teamBST.c" />
     <ClCompile Include="teamLinklist.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="playerBST.h" />
     <ClInclude Include="playerLinklist.h" />
+    <ClInclude Include="teamBST.h" />
     <ClInclude Include="teamlinklist.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

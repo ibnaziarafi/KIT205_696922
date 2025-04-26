@@ -27,6 +27,9 @@
     <ClCompile Include="playerBST.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="teamBST.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="playerLinklist.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="playerBST.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="teamBST.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
