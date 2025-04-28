@@ -1,20 +1,51 @@
-Lionel Messi,Forward,36,50.0
-Cristiano Ronaldo,Forward,39,40.0
-Kylian Mbappe,Forward,26,180.0
-Erling Haaland,Striker,24,170.0
-Kevin De Bruyne,Midfielder,33,90.0
-Virgil van Dijk,Defender,32,75.0
-Mohamed Salah,Forward,31,90.0
-Neymar Jr,Forward,33,70.0
-Karim Benzema,Striker,37,25.0
-Robert Lewandowski,Striker,36,40.0
-Luka Modric,Midfielder,39,10.0
-Thibaut Courtois,Goalkeeper,33,50.0
-Joshua Kimmich,Midfielder,30,70.0
-Jude Bellingham,Midfielder,22,120.0
-Vinicius Jr,Forward,24,150.0
-Bukayo Saka,Winger,22,100.0
-Martin Odegaard,Midfielder,26,80.0
-Alisson Becker,Goalkeeper,32,60.0
-Trent Alexander-Arnold,Defender,26,90.0
-Pedri,Midfielder,22,85.0
+Real Madrid
+Barcelona
+Manchester United
+Liverpool
+Manchester City
+Arsenal
+Chelsea
+Bayern Munich
+Paris Saint-Germain
+Juventus
+AC Milan
+Inter Milan
+Atletico Madrid
+Borussia Dortmund
+Tottenham Hotspur
+AS Roma
+Napoli
+Sevilla
+RB Leipzig
+Ajax
+Porto
+Benfica
+Sporting CP
+Monaco
+Lyon
+Marseille
+Lazio
+Fiorentina
+Valencia
+Villarreal
+West Ham United
+Everton
+Leicester City
+Wolves
+Newcastle United
+Celtic
+Rangers
+PSV Eindhoven
+Galatasaray
+Fenerbahce
+Besiktas
+Shakhtar Donetsk
+Zenit St Petersburg
+Boca Juniors
+River Plate
+Santos
+Flamengo
+Palmeiras
+Al Ahly
+Al Hilal
+Tigres UANL

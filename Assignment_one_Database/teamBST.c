@@ -72,7 +72,7 @@ void print_team_bst(const TeamBSTNodePtr root) {
     print_team_bst(root->right);
 }
 
-
+//to test if each functions are working
 void test_team_bst_module() {
     printf("\nRunning test_team_bst_module()...\n");
 
@@ -103,3 +103,23 @@ void test_team_bst_module() {
     printf("\nTest: Print team BST with teams and players:\n");
     print_team_bst(root);
 }
+
+void test_team_bst_module_from_external() {
+    printf("\nRunning test_team_bst_module()...\n");
+
+    TeamBSTNodePtr teams = load_teams("teams.txt");
+    PlayerBSTNodePtr players = load_players("players.txt");
+
+
+    if (teams != NULL && players != NULL) {
+        TeamBSTNodePtr firstTeam = teams;
+        while (firstTeam->left != NULL) {
+            firstTeam = firstTeam->left;
+        }
+        firstTeam->players = players;
+    }
+
+    printf("\nTeams with players:\n");
+    print_team_bst(teams);
+}
+
