@@ -17,7 +17,10 @@ typedef struct teamList {
 // Function declarations
 TeamNodePtr create_team(const char* name);
 void add_team(TeamList* list, TeamNodePtr team);
+TeamList load_teams_linklist(const char* filename);
+void assign_players_to_teams_linklist(TeamList* teams, const char* playersFile);
 void print_teams(const TeamList* list);
 void test_team_module();
+void test_team_module_from_external();
 
 #endif

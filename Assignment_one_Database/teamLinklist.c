@@ -23,6 +23,51 @@ void add_team(TeamList* list, TeamNodePtr team) {
     list->head = team;
 }
 
+TeamList load_teams_linklist(const char* filename) {
+    TeamList list = { NULL };
+    FILE* file = fopen(filename, "r");
+    if (!file) {
+        printf("Error: Could not open %s\n", filename);
+        return list;
+    }
+
+    char teamName[100];
+
+    while (fgets(teamName, sizeof(teamName), file)) {
+        // Remove trailing newline
+        teamName[strcspn(teamName, "\r\n")] = 0;
+        if (strlen(teamName) > 0) {
+            TeamNodePtr team = create_team(teamName);
+            add_team(&list, team);
+        }
+    }
+
+    fclose(file);
+    return list;
+}
+
+void assign_players_to_teams_linklist(TeamList* teams, const char* playersFile) {
+    PlayerList players = load_players_linklist(playersFile);
+
+    if (teams->head == NULL) {
+        printf("No teams to assign players.\n");
+        return;
+    }
+
+    TeamNodePtr curr = teams->head;
+    while (curr) {
+        // Clone all players into each team
+        PlayerNodePtr p = players.head;
+        while (p) {
+            PlayerNodePtr newPlayer = create_player(p->name, p->position, p->age, p->contractValue);
+            add_player(&curr->players, newPlayer);
+            p = p->next;
+        }
+        curr = curr->next;
+    }
+}
+
+
 void print_teams(const TeamList* list) {
     if (list->head == NULL) {
         printf("No teams available.\n");
@@ -39,7 +84,7 @@ void print_teams(const TeamList* list) {
 }
 
 
-void test_team_module() {
+void test_team_module_from() {
     printf("\nRunning test_team_module()...\n");
 
     TeamList testLeague = { NULL };
@@ -62,4 +107,19 @@ void test_team_module() {
     printf("\nTest: Print teams and players:\n");
     print_teams(&testLeague);
 }
+
+void test_team_module_from_external() {
+    printf("\nRunning test_team_module()...\n");
+
+    TeamList league = load_teams_linklist("teams.txt");
+
+    printf("Test: Print teams BEFORE assigning players:\n");
+    print_teams(&league);
+
+    assign_players_to_teams_linklist(&league, "players.txt");
+
+    printf("\nTest: Print teams AFTER assigning players:\n");
+    print_teams(&league);
+}
+
 

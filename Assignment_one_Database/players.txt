@@ -18,3 +18,34 @@ Martin Odegaard,Midfielder,26,80.0
 Alisson Becker,Goalkeeper,32,60.0
 Trent Alexander-Arnold,Defender,26,90.0
 Pedri,Midfielder,22,85.0
+Erik ten Hag,Manager,54,15.0
+Marcus Rashford,Forward,27,85.0
+Bruno Fernandes,Midfielder,30,75.0
+Casemiro,Midfielder,33,50.0
+Raphael Varane,Defender,31,40.0
+Harry Kane,Striker,31,110.0
+Son Heung-min,Forward,32,85.0
+Declan Rice,Midfielder,26,100.0
+Rodri,Midfielder,28,95.0
+Bernardo Silva,Midfielder,30,80.0
+Phil Foden,Midfielder,25,95.0
+Jack Grealish,Winger,29,70.0
+Sadio Mane,Forward,33,45.0
+Andrew Robertson,Defender,31,60.0
+Joao Cancelo,Defender,30,55.0
+Ederson Moraes,Goalkeeper,32,50.0
+Gianluigi Donnarumma,Goalkeeper,26,60.0
+Marquinhos,Defender,31,70.0
+Achraf Hakimi,Defender,27,75.0
+Frenkie de Jong,Midfielder,28,80.0
+Antoine Griezmann,Forward,34,45.0
+Ousmane Dembele,Winger,28,55.0
+Christian Pulisic,Winger,27,45.0
+Paulo Dybala,Forward,31,40.0
+Angel Di Maria,Winger,37,15.0
+Theo Hernandez,Defender,28,70.0
+Raphael Leao,Forward,26,80.0
+Christopher Nkunku,Forward,28,70.0
+Mason Mount,Midfielder,26,55.0
+Kalidou Koulibaly,Defender,34,20.0
+Reece James,Defender,26,65.0

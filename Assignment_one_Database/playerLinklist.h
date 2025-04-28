@@ -16,6 +16,7 @@ typedef struct playerList {
 // Function declarations
 PlayerNodePtr create_player(const char* name, const char* position, int age, float contractValue);
 void add_player(PlayerList* list, PlayerNodePtr player);
+PlayerList load_players_linklist(const char* filename);
 void print_players(const PlayerList* list);
 
 #endif

@@ -25,6 +25,28 @@ void add_player(PlayerList* list, PlayerNodePtr player) {
     list->head = player;
 }
 
+PlayerList load_players_linklist(const char* filename) {
+    PlayerList list = { NULL };
+    FILE* file = fopen(filename, "r");
+    if (!file) {
+        printf("Error: Could not open %s\n", filename);
+        return list;
+    }
+
+    char name[100], position[100];
+    int age;
+    float value;
+
+    while (fscanf(file, "%[^,],%[^,],%d,%f\n", name, position, &age, &value) == 4) {
+        PlayerNodePtr player = create_player(name, position, age, value);
+        add_player(&list, player);
+    }
+
+    fclose(file);
+    return list;
+}
+
+
 void print_players(const PlayerList* list) {
     PlayerNodePtr curr = list->head;
     while (curr) {
