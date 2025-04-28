@@ -56,6 +56,22 @@ TeamBSTNodePtr load_teams(const char* filename) {
     return root;
 }
 
+void assign_players_to_teams(TeamBSTNodePtr teams) {
+    if (teams == NULL) {
+        return;
+    }
+
+    // Go to left subtree
+    assign_players_to_teams(teams->left);
+
+    // Assign players to this team
+    teams->players = load_players("players.txt");
+
+    // Go to right subtree
+    assign_players_to_teams(teams->right);
+}
+
+
 void print_team_bst(const TeamBSTNodePtr root) {
     if (root == NULL) {
         return;
@@ -108,15 +124,9 @@ void test_team_bst_module_from_external() {
     printf("\nRunning test_team_bst_module()...\n");
 
     TeamBSTNodePtr teams = load_teams("teams.txt");
-    PlayerBSTNodePtr players = load_players("players.txt");
 
-
-    if (teams != NULL && players != NULL) {
-        TeamBSTNodePtr firstTeam = teams;
-        while (firstTeam->left != NULL) {
-            firstTeam = firstTeam->left;
-        }
-        firstTeam->players = players;
+    if (teams != NULL) {
+        assign_players_to_teams(teams);
     }
 
     printf("\nTeams with players:\n");
