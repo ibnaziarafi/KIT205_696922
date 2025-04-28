@@ -33,6 +33,29 @@ TeamBSTNodePtr insert_team_bst(TeamBSTNodePtr root, TeamBSTNodePtr newNode) {
     return root;
 }
 
+TeamBSTNodePtr load_teams(const char* filename) {
+    FILE* file = fopen(filename, "r");
+    if (file == NULL) {
+        printf("Error: Could not open team file '%s'.\n", filename);
+        return NULL;
+    }
+
+    TeamBSTNodePtr root = NULL;
+    char buffer[100];
+
+    while (fgets(buffer, sizeof(buffer), file)) {
+        // Remove newline character
+        buffer[strcspn(buffer, "\n")] = '\0';
+        if (strlen(buffer) > 0) {
+            TeamBSTNodePtr newTeam = create_team_bst_node(buffer);
+            root = insert_team_bst(root, newTeam);
+        }
+    }
+
+    fclose(file);
+    return root;
+}
+
 void print_team_bst(const TeamBSTNodePtr root) {
     if (root == NULL) {
         return;

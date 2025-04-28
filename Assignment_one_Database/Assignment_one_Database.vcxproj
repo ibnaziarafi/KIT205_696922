@@ -139,6 +139,10 @@
     <ClInclude Include="teamBST.h" />
     <ClInclude Include="teamlinklist.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="players.txt" />
+    <Text Include="teams.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

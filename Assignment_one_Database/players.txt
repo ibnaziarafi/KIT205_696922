@@ -1,0 +1,51 @@
+Real Madrid
+Barcelona
+Manchester United
+Liverpool
+Manchester City
+Arsenal
+Chelsea
+Bayern Munich
+Paris Saint-Germain
+Juventus
+AC Milan
+Inter Milan
+Atletico Madrid
+Borussia Dortmund
+Tottenham Hotspur
+AS Roma
+Napoli
+Sevilla
+RB Leipzig
+Ajax
+Porto
+Benfica
+Sporting CP
+Monaco
+Lyon
+Marseille
+Lazio
+Fiorentina
+Valencia
+Villarreal
+West Ham United
+Everton
+Leicester City
+Wolves
+Newcastle United
+Celtic
+Rangers
+PSV Eindhoven
+Galatasaray
+Fenerbahce
+Besiktas
+Shakhtar Donetsk
+Zenit St Petersburg
+Boca Juniors
+River Plate
+Santos
+Flamengo
+Palmeiras
+Al Ahly
+Al Hilal
+Tigres UANL

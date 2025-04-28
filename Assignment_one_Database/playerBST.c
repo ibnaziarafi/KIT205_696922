@@ -35,6 +35,30 @@ PlayerBSTNodePtr insert_player_bst(PlayerBSTNodePtr root, PlayerBSTNodePtr newNo
     return root;
 }
 
+PlayerBSTNodePtr load_players(const char* filename) {
+    FILE* file = fopen(filename, "r");
+    if (file == NULL) {
+        printf("Error: Could not open player file '%s'.\n", filename);
+        return NULL;
+    }
+
+    PlayerBSTNodePtr root = NULL;
+    char line[200];
+    char name[100], position[50];
+    int age;
+    float contractValue;
+
+    while (fgets(line, sizeof(line), file)) {
+        if (sscanf(line, "%[^,],%[^,],%d,%f", name, position, &age, &contractValue) == 4) {
+            PlayerBSTNodePtr newPlayer = create_player_bst_node(name, position, age, contractValue);
+            root = insert_player_bst(root, newPlayer);
+        }
+    }
+
+    fclose(file);
+    return root;
+}
+
 void print_player_bst(const PlayerBSTNodePtr root) {
     if (root == NULL) {
         return;
