@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include "teamlinklist.h"
 
 static char* strdup_safe(const char* src) {
@@ -111,6 +112,11 @@ void test_team_module_from() {
 void test_team_module_from_external() {
     printf("\nRunning test_team_module()...\n");
 
+    clock_t start_ll, end_ll;
+    double time_ll;
+
+    start_ll = clock();
+
     TeamList league = load_teams_linklist("teams.txt");
 
     printf("Test: Print teams BEFORE assigning players:\n");
@@ -120,6 +126,10 @@ void test_team_module_from_external() {
 
     printf("\nTest: Print teams AFTER assigning players:\n");
     print_teams(&league);
+
+    end_ll = clock();
+    time_ll = ((double)(end_ll - start_ll)) / CLOCKS_PER_SEC;
+    printf("Time taken for Linked List insertions: %.6f seconds\n", time_ll);
 }
 
 
