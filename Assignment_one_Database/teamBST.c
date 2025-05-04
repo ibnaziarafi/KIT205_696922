@@ -139,6 +139,6 @@ void test_team_bst_module_from_external() {
 
     end_ll = clock();
     time_ll = ((double)(end_ll - start_ll)) / CLOCKS_PER_SEC;
-    printf("Time taken for Linked List insertions: %.6f seconds\n", time_ll);
+    printf("Time taken for BST insertions: %.6f seconds\n", time_ll);
 }
 

@@ -49,3 +49,52 @@ Palmeiras
 Al Ahly
 Al Hilal
 Tigres UANL
+Club América
+Cruz Azul
+Gremio
+Internacional
+Corinthians
+Sao Paulo
+Red Bull Bragantino
+LA Galaxy
+Los Angeles FC
+New York City FC
+Inter Miami CF
+Atlanta United
+Toronto FC
+CF Montréal
+Seattle Sounders
+Portland Timbers
+Club León
+Pachuca
+Monterrey
+Guangzhou FC
+Shanghai Shenhua
+Beijing Guoan
+Jeonbuk Hyundai Motors
+Ulsan Hyundai
+Kawasaki Frontale
+Yokohama F. Marinos
+Al Nassr
+Al Ittihad
+Dinamo Zagreb
+Red Star Belgrade
+Partizan Belgrade
+Anderlecht
+Club Brugge
+Genk
+FC Copenhagen
+Malmö FF
+Rosenborg
+AEK Athens
+Olympiacos
+Panathinaikos
+Basel
+Young Boys
+Ludogorets Razgrad
+Slavia Prague
+Sparta Prague
+Sheriff Tiraspol
+APOEL
+HJK Helsinki
+Sturm Graz

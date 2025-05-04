@@ -85,7 +85,7 @@ void print_teams(const TeamList* list) {
 }
 
 
-void test_team_module_from() {
+void test_team_module() {
     printf("\nRunning test_team_module()...\n");
 
     TeamList testLeague = { NULL };
