@@ -23,7 +23,7 @@ void print_graph(Graph* g) {
         printf("Vertex %d:", i);
         EdgeNodePtr curr = g->edges[i].head;
         while (curr != NULL) {
-            printf(" -> (%d, w=%d)", curr->edge.to_vertex, curr->edge.weight);
+            printf(" -> %d", curr->edge.to_vertex);
             curr = curr->next;
         }
         printf("\n");

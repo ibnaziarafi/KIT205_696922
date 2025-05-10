@@ -22,7 +22,6 @@ int main() {
 
     fclose(file);
 
-    // Optional: print the graph
     print_graph(&G);
 
     free_graph(&G);
