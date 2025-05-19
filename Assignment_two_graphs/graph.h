@@ -8,8 +8,6 @@ typedef struct graph Graph;
 
 Graph* createGraph(int vertices);
 void addEdge(Graph* graph, int from, int to, int weight);
-void loadGraphFromFile(Graph* graph, const char* filename);
-void freeGraph(Graph* graph);
 void printGraph(Graph* graph);
 
 #endif 
