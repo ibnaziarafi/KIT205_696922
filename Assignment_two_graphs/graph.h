@@ -1,23 +1,15 @@
 #ifndef GRAPH_H
 #define GRAPH_H
 
-typedef struct edge {
-    int to_vertex;
-    int weight;
-} Edge;
+typedef struct edge Edge;
+typedef struct edgeNode* EdgeNodePtr;
+typedef struct edgeList EdgeList;
+typedef struct graph Graph;
 
-typedef struct edgeNode {
-    Edge edge;
-    struct edgeNode* next;
-} *EdgeNodePtr;
-
-typedef struct edgeList {
-    EdgeNodePtr head;
-} EdgeList;
-
-typedef struct graph {
-    int V;
-    EdgeList* edges;
-} Graph;
+Graph* createGraph(int vertices);
+void addEdge(Graph* graph, int from, int to, int weight);
+void loadGraphFromFile(Graph* graph, const char* filename);
+void freeGraph(Graph* graph);
+void printGraph(Graph* graph);
 
 #endif 
