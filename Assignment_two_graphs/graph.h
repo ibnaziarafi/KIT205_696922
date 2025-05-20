@@ -9,5 +9,7 @@ typedef struct graph Graph;
 Graph* createGraph(int vertices);
 void addEdge(Graph* graph, int from, int to, int weight);
 void printGraph(Graph* graph);
+void loadGraphFromFile(Graph* graph, const char* filename);
+void freeGraph(Graph* graph);
 
 #endif 

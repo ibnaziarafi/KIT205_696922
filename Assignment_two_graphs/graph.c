@@ -51,3 +51,33 @@ void printGraph(Graph* graph) {
         printf("\n");
     }
 }
+
+void loadGraphFromFile(Graph* graph, const char* filename) {
+    FILE* file = fopen(filename, "r");
+    if (!file) {
+        printf("Error opening file %s\n", filename);
+        return;
+    }
+
+    int vertices, from, to, weight;
+    fscanf(file, "%d", &vertices); // First line may be number of vertices (optional)
+
+    while (fscanf(file, "%d,%d,%d", &from, &to, &weight) == 3) {
+        addEdge(graph, from, to, weight);
+    }
+
+    fclose(file);
+}
+
+void freeGraph(Graph* graph) {
+    for (int i = 0; i < graph->V; i++) {
+        EdgeNodePtr current = graph->edges[i].head;
+        while (current) {
+            EdgeNodePtr temp = current;
+            current = current->next;
+            free(temp);
+        }
+    }
+    free(graph->edges);
+    free(graph);
+}
