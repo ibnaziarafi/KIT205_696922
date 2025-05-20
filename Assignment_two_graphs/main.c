@@ -2,8 +2,9 @@
 #include "graph.h"
 
 int main() {
-    // Create a graph with 5 vertices (0 to 4)
+    
     Graph* graph = createGraph(5);
+    Graph* graphb = createGraph(20);
 
     // Add edges: from, to, weight
     addEdge(graph, 0, 1, 10);
@@ -16,6 +17,12 @@ int main() {
     // Print the graph
     printf("Graph structure:\n");
     printGraph(graph);
+    loadGraphFromFile(graphb, "graph.txt");
+    printf("Graph loaded from file:\n");
+    printGraph(graphb);
+
+    freeGraph(graph);
+    freeGraph(graphb);
 
 
     return 0;
