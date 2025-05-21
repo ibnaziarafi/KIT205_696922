@@ -4,7 +4,7 @@
 int main() {
     
     Graph* graph = createGraph(5);
-    Graph* graphb = createGraph(20);
+    Graph* graphb = createGraph(1000);
 
     // Add edges: from, to, weight
     addEdge(graph, 0, 1, 10);
@@ -20,6 +20,9 @@ int main() {
     loadGraphFromFile(graphb, "graph.txt");
     printf("Graph loaded from file:\n");
     printGraph(graphb);
+    printf("Running Dijkstra:\n");
+    dijkstra(graphb, 1, 5);
+    dijkstra(graphb, 1, 7);
 
     freeGraph(graph);
     freeGraph(graphb);

@@ -3,24 +3,6 @@
 #include <stdlib.h>
 #include "graph.h"
 
-struct edge {
-    int to_vertex;
-    int weight;
-};
-
-struct edgeNode {
-    Edge edge;
-    struct edgeNode* next;
-};
-
-struct edgeList {
-    EdgeNodePtr head;
-};
-
-struct graph {
-    int V;
-    EdgeList* edges;
-};
 
 Graph* createGraph(int vertices) {
     Graph* graph = (Graph*)malloc(sizeof(Graph));
@@ -82,3 +64,7 @@ void freeGraph(Graph* graph) {
     free(graph->edges);
     free(graph);
 }
+
+//
+
+
