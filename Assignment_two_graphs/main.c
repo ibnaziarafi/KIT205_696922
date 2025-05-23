@@ -18,8 +18,9 @@ int main() {
 
     printf("Graph structure:\n");
     printGraph(graph);
-    dijkstra_heap(graph, 0, 3);
     dijkstra(graph, 0, 3);
+    dijkstra_heap(graph, 0, 3);
+
     loadGraphFromFile(graphb, "graph.txt");
     loadGraphFromFile(graphc, "graph_sec.txt");
     
