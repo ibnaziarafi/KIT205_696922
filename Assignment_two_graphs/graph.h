@@ -30,6 +30,9 @@ void addEdge(Graph* graph, int from, int to, int weight);
 void printGraph(Graph* graph);
 void loadGraphFromFile(Graph* graph, const char* filename);
 void freeGraph(Graph* graph);
+
 void dijkstra(Graph* graph, int start, int end);
+void dijkstra_heap(Graph* graph, int start, int end);
+
 
 #endif 

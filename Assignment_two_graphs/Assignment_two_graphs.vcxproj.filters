@@ -24,6 +24,9 @@
     <ClCompile Include="dijkstra_model.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="dijkstra_heap_model.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="graph.h">
@@ -32,5 +35,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="graph.txt" />
+    <Text Include="graph_sec.txt" />
   </ItemGroup>
 </Project>

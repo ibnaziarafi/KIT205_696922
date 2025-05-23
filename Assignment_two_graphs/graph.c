@@ -43,7 +43,7 @@ void loadGraphFromFile(Graph* graph, const char* filename) {
     }
 
     int vertices, from, to, weight;
-    fscanf(file, "%d", &vertices); // First line may be number of vertices (optional)
+    fscanf(file, "%d", &vertices); 
 
     while (fscanf(file, "%d,%d,%d", &from, &to, &weight) == 3) {
         addEdge(graph, from, to, weight);
@@ -66,5 +66,4 @@ void freeGraph(Graph* graph) {
 }
 
 //
-
 
