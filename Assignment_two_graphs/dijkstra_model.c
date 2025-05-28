@@ -26,7 +26,7 @@ void displayResult(int* parent, int start, int end, int distance) {
     printf("\n");
 }
 
-
+//help taken from chatgpt
 void dijkstra(Graph* graph, int start, int end) {
     int V = graph->V;
     int* dist = malloc(V * sizeof(int));

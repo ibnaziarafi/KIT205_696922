@@ -36,5 +36,6 @@
   <ItemGroup>
     <Text Include="graph.txt" />
     <Text Include="graph_sec.txt" />
+    <Text Include="graph_euroroad.txt" />
   </ItemGroup>
 </Project>

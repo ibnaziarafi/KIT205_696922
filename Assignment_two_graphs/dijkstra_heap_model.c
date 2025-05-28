@@ -40,7 +40,7 @@ void swapMinHeapNode(MinHeapNode** a, MinHeapNode** b) {
     *b = t;
 }
 
-
+//help taken from chatgpt
 void minHeapify(MinHeap* heap, int i) {
     int smallest = i;
     int left = 2 * i + 1;
@@ -71,7 +71,7 @@ int isEmpty(MinHeap* heap) {
     return heap->size == 0;
 }
 
-
+//help taken from chatgpt
 MinHeapNode* extractMin(MinHeap* heap) {
     if (isEmpty(heap)) return NULL;
 
@@ -124,7 +124,7 @@ void displayHeapResult(int* parent, int start, int end, int dist) {
     printf("\n");
 }
 
-//Dijkstra using min-heap
+//Dijkstra using min-heap(used chatgpt to complete this function)
 void dijkstra_heap(Graph* graph, int start, int end) {
     int V = graph->V;
     int* dist = malloc(V * sizeof(int));

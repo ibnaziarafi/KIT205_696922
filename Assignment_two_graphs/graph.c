@@ -25,10 +25,10 @@ void addEdge(Graph* graph, int from, int to, int weight) {
 
 void printGraph(Graph* graph) {
     for (int i = 0; i < graph->V; i++) {
-        printf("Vertex %d:", i);
+        printf("Vertex %d : (Edge) ", i);
         EdgeNodePtr current = graph->edges[i].head;
         while (current != NULL) {
-            printf(" -> %d(w=%d)", current->edge.to_vertex, current->edge.weight);
+            printf(" - (Edge %d, Weight %d)", current->edge.to_vertex, current->edge.weight);
             current = current->next;
         }
         printf("\n");

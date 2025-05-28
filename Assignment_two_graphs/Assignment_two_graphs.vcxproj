@@ -137,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="graph.txt" />
+    <Text Include="graph_euroroad.txt" />
     <Text Include="graph_sec.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

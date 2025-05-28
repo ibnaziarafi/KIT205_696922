@@ -7,6 +7,7 @@ int main() {
     Graph* graph = createGraph(5);
     Graph* graphb = createGraph(4000);
     Graph* graphc = createGraph(60);
+    Graph* graphd = createGraph(1174);
 
     addEdge(graph, 0, 1, 10);
     addEdge(graph, 0, 4, 20);
@@ -21,14 +22,16 @@ int main() {
     dijkstra(graph, 0, 3);
     dijkstra_heap(graph, 0, 3);
 
-    loadGraphFromFile(graphb, "graph.txt");
-    loadGraphFromFile(graphc, "graph_sec.txt");
+    //loadGraphFromFile(graphb, "graph.txt");
+    //loadGraphFromFile(graphc, "graph_sec.txt");
+    loadGraphFromFile(graphd, "graph_euroroad.txt");
     
     clock_t start = clock();
     printf("Running Dijkstra:\n");
-    dijkstra(graphb, 1, 1999);
+    /*dijkstra(graphb, 1, 1999);
     dijkstra(graphc, 0, 12);
-    dijkstra(graphc, 27, 59);
+    dijkstra(graphc, 27, 59);*/
+    dijkstra_heap(graphd, 6, 1138);
     clock_t end = clock();
     double duration = (double)(end - start) / CLOCKS_PER_SEC;
     printf("Execution time: %f seconds\n", duration);
