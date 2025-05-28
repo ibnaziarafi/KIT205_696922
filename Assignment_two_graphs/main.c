@@ -8,6 +8,11 @@ int main() {
     Graph* graphb = createGraph(4000);
     Graph* graphc = createGraph(60);
     Graph* graphd = createGraph(1174);
+
+    //graph loading from external files
+    loadGraphFromFile(graphb, "graph.txt");
+    loadGraphFromFile(graphc, "graph_sec.txt");
+    loadGraphFromFile(graphd, "graph_euroroad.txt");
     //initial testing stuff
     addEdge(graph, 0, 1, 10);
     addEdge(graph, 0, 4, 20);
@@ -19,24 +24,22 @@ int main() {
 
     printf("Graph structure:\n");
     printGraph(graph);
+    printGraph(graphc);
     dijkstra(graph, 0, 3);
     dijkstra_heap(graph, 0, 3);
-    //graph loading from external files
-    loadGraphFromFile(graphb, "graph.txt");
-    loadGraphFromFile(graphc, "graph_sec.txt");
-    loadGraphFromFile(graphd, "graph_euroroad.txt");
+
     //Naive and heap dijkstra model testing side by side
 
     //Test phase 1 (naive)
     clock_t startDN1 = clock();
-    printf("Running Dijkstra:\n");
+    printf("Running Dijkstra(total vertices 4000):\n");
     dijkstra(graphb, 1, 3999);
     clock_t endDN1 = clock();
     double durationDN1 = (double)(endDN1 - startDN1) / CLOCKS_PER_SEC;
     printf("Execution time: %f seconds\n", durationDN1);
     //Test phase 1 (min-heap)
     clock_t startDH1 = clock();
-    printf("Running Dijkstra heap model:\n");
+    printf("Running Dijkstra heap model(total vertices 4000):\n");
     dijkstra_heap(graphb, 1, 3999);
     clock_t endDH1 = clock();
     double durationDH1 = (double)(endDH1 - startDH1) / CLOCKS_PER_SEC;
@@ -45,14 +48,14 @@ int main() {
     
     //Test phase 2 (naive)
     clock_t startDN2 = clock();
-    printf("Running Dijkstra:\n");
+    printf("Running Dijkstra(total vertices 60):\n");
     dijkstra(graphc, 0, 12);
     clock_t endDN2 = clock();
     double durationDN2 = (double)(endDN2 - startDN2) / CLOCKS_PER_SEC;
     printf("Execution time: %f seconds\n", durationDN2);
     //Test phase 2 (min-heap)
     clock_t startDH2 = clock();
-    printf("Running Dijkstra heap model:\n");
+    printf("Running Dijkstra heap model(total vertices 60):\n");
     dijkstra_heap(graphc, 0, 12);
     clock_t endDH2 = clock();
     double durationDH2 = (double)(endDH2 - startDH2) / CLOCKS_PER_SEC;
@@ -60,14 +63,14 @@ int main() {
     printf("\n");
     //Test phase 3 (naive)
     clock_t startDN3 = clock();
-    printf("Running Dijkstra:\n");
+    printf("Running Dijkstra(total vertices 60):\n");
     dijkstra(graphc, 27, 59);
     clock_t endDN3 = clock();
     double durationDN3 = (double)(endDN3 - startDN3) / CLOCKS_PER_SEC;
     printf("Execution time: %f seconds\n", durationDN3);
     //Test phase 3 (min-heap)
     clock_t startDH3 = clock();
-    printf("Running Dijkstraheap model:\n");
+    printf("Running Dijkstraheap model(total vertices 60):\n");
     dijkstra_heap(graphc, 27, 59);
     clock_t endDH3 = clock();
     double durationDH3 = (double)(endDH3 - startDH3) / CLOCKS_PER_SEC;
@@ -76,21 +79,20 @@ int main() {
 
     //Test phase 4 (naive)
     clock_t startDN4 = clock();
-    printf("Running Dijkstra:\n");
+    printf("Running Dijkstra(total vertices 1174):\n");
     dijkstra(graphd, 6, 1138);
     clock_t endDN4 = clock();
     double durationDN4 = (double)(endDN4 - startDN4) / CLOCKS_PER_SEC;
     printf("Execution time: %f seconds\n", durationDN4);
     //Test phase 4 (min-heap)
     clock_t startDH4 = clock();
-    printf("Running Dijkstra heap model:\n");
+    printf("Running Dijkstra heap model(total vertices 1174):\n");
     dijkstra_heap(graphd, 6, 1138);
     clock_t endDH4 = clock();
     double durationDH4 = (double)(endDH4 - startDH4) / CLOCKS_PER_SEC;
     printf("Execution time: %f seconds\n", durationDH4);
     printf("\n");
-
-    //graph testing using Dijkstra min-heap model 
+ 
     
 
 
