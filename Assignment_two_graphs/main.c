@@ -29,6 +29,8 @@ int main() {
     dijkstra_heap(graph, 0, 3);
 
     //Naive and heap dijkstra model testing side by side
+    printf("\n------------------------------------------------------\n");
+    printf("Naive and heap dijkstra model testing side by side\n");
 
     //Test phase 1 (naive)
     clock_t startDN1 = clock();
@@ -92,6 +94,24 @@ int main() {
     double durationDH4 = (double)(endDH4 - startDH4) / CLOCKS_PER_SEC;
     printf("Execution time: %f seconds\n", durationDH4);
     printf("\n");
+
+    //Test phase 5 (naive)
+    clock_t startDN5 = clock();
+    printf("Running Dijkstra(total vertices 4000):\n");
+    dijkstra(graphb, 100, 3666);
+    clock_t endDN5 = clock();
+    double durationDN5 = (double)(endDN5 - startDN5) / CLOCKS_PER_SEC;
+    printf("Execution time: %f seconds\n", durationDN5);
+    //Test phase 5 (min-heap)
+    clock_t startDH5 = clock();
+    printf("Running Dijkstra heap model(total vertices 4000):\n");
+    dijkstra_heap(graphb, 100, 3666);
+    clock_t endDH5 = clock();
+    double durationDH5 = (double)(endDH5 - startDH5) / CLOCKS_PER_SEC;
+    printf("Execution time: %f seconds\n", durationDH5);
+    printf("\n");
+
+
  
     
 
